@@ -3,23 +3,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>登录</title>
-        <link rel="shortcut icon" href="img/login.ico">
+		<title></title>
 	</head>
 	<body>
-        <body background="/img/密码验证背景.jpg"></body>
 		<div>
 			<span>用户名:</span>
 			<input type="text" placeholder="请输入用户名..." id="username">
 			<span>密码:</span>
-			<input type="password" placeholder="请输入密码..." id="passwd">
+			<input type="password" placeholder="请输入用户名..." id="passwd">
 			<input type="button" value="登录" onclick="login()">
 			<input type="button" id="btnClear" value="清除" onclick="doClear()" />
 		</div>
 		<script type="text/javascript">
 			let accountAll = [{ // 存储账户json数据的数组
-					username: shiyuchen,
-					passwd: '0406'
+					username: 123,
+					passwd: 'qwe'
 				},
 				{
 					username: 456,
@@ -41,15 +39,13 @@
 				} else {
 					if (account.username == username && account.passwd == passwd) {
 						alert('登陆成功');
-						window.location.href="https://shiyuchen0406.github.io/作业答案/索引";
-					}
-                     else {
+					} else {
 						alert('登陆失败');
 					}
 				}
 			}
 			function doClear() { //获取页面所有的input框，是text和password框，内容=空串
-				let inputs = document.getElementsByTagName("input")
+				let inputs = document.getElementsByTagName("input");
 				for (let i = 0; i < inputs.length; i++) {
 					if (inputs[i].type == 'text' || inputs[i].type == 'password') {
 						inputs[i].value = '';
