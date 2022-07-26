@@ -9,6 +9,40 @@
     <link rel="shortcut icon" href="img/login.ico">
 </head>
 <body>
+	<script>
+		//按键触发
+	document.onkeydown = function(){
+	  //禁止 F12
+	  if (window.event && window.event.keyCode == 123) {
+	  event.keyCode = 0;
+	  event.returnValue = false;
+	  }
+	  }
+	</script>
+	<script>
+		//按键触发
+	document.onkeydown = function(){
+	  //禁止ctrl+u
+	  if (event.ctrlKey && window.event.keyCode==85){
+	  return false;
+	  }
+	  }
+	</script>
+	<SCRIPT language=javascript>
+		function click() {if (event.button==2) {alert('对不起，您无权查看源代码');}}document.onmousedown=click
+		</SCRIPT>
+		<script Language="JavaScript">
+			function click() 
+			if (event.button==2||event.button==3) 
+			{
+				alert('用右键干嘛？！');
+			}
+			//引号中提示可自定义
+			document.onmousedown=click
+			</script>
+			<script language="javascript">
+				if(top==self)top.location="adminlogin.htm"
+				</script>
     <body background="img/密码验证背景.jpg"></body>
     <h1>请登录</h1>
 		<div>
@@ -29,8 +63,8 @@
 					passwd: 'gfahjfk'
 				},
 				{
-					username: 789,
-					passwd: 'zxc'
+					username: 'asfdghjk',
+					passwd: 'ghvashjjdkdk'
 				}
 			]
 			function login() { //登陆判断
