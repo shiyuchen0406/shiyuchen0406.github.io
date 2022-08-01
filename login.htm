@@ -9,6 +9,15 @@
 <FRAME SRC="login1.html" NAME="search" noresize>
 </frameset>
 <body>
+</script>
+<script>
+document.onkeydown = function(){
+    //禁止12
+    if (event.ctrlKey && window.event.keyCode==123){
+    return false;
+    }
+    }
+    </script>
     <script>
         //按键触发
     document.onkeydown = function(){
