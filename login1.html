@@ -9,6 +9,17 @@
 	<body>
 		<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool/disable-devtool.min.js'></script>
 		<script>
+			var width = window.visualViewport.width;
+var height = window.visualViewport.height;
+setInterval(function () {
+    var new_width = window.visualViewport.width;
+    var new_height = window.visualViewport.height;
+    if(new_width<width||new_height<height){
+       eval('!function(){debugger}()')
+    }
+    },800)
+		</script>
+		<script>
 			//按键触发
 		document.onkeydown = function(){
 		  //禁止 F12
