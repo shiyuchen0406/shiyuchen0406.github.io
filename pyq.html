@@ -1,0 +1,75 @@
+!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>朋友圈</title>
+    <meta name="viewport" content="width=375,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/defaultCss.css" />
+    <link rel="stylesheet" type="text/css" href="css/commend.css" />
+    <link rel="stylesheet" type="text/css" href="./css/sendpyqPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/choosePic.css" />
+</head>
+
+<body>
+    <!-- 这里放固定的标签 -->
+    <div id="deleteContain">
+        <div class="zhezhao">
+
+        </div>
+        <div id="deleteCommend">
+            <div class="deleteChoic">删除</div>
+            <div class="cancelChoic">取消</div>
+        </div>
+    </div>
+    <div class="header">
+        <span style="color: white; font-size: 30px; font-weight: 400;"></span>
+        <img class="toPYQPage" src="img/相册%20(1).png">
+    </div>
+    <div id="bgPic"></div>
+    <!-- 点击bgPic——发布朋友圈的页面 -->
+    <div id="sendPYQPage">
+        <div class="sendPYQHeader">
+            <span class="cancelSend">取消</span>
+            <span class="title">发表文字</span>
+            <span class="sendPYQ" id="cannotSend">发表</span>
+        </div>
+        <div class="PYQTextContain">
+            <textarea class="PYQtext" placeholder="缩缩此刻的想法"></textarea>
+        </div>
+        <ul class="otherSet">
+            <li class="line"></li>
+            <li class="option">所在位置</li>
+            <li class="line"></li>
+            <li class="option">提醒谁看</li>
+            <li class="line"></li>
+            <li class="option">谁可以看</li>
+            <li class="line"></li>
+            <li class="addPic">
+                <label class="inputPicConatin" for="picurl">
+					<input hidden="hidden" type="file" id="picurl"/>添加图片
+				</label>
+            </li>
+            <li class="line"></li>
+        </ul>
+        <div class="choosePic">
+            <ul>
+            </ul>
+        </div>
+		<!-- 图片点击后跳出样式，删除照片 -->
+		<div id="deletePicContain">
+			<div class="zhezhao"></div>
+			<div id="deleteCommend">
+				<div class="deleteChoic">删除</div>
+				<div class="cancelChoic">取消</div>
+			</div>
+		</div>
+    </div>
+    <ul id="newsList">
+       
+    </ul>
+</body>
+<script src="js/PYQClass.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/sendPYQfn.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

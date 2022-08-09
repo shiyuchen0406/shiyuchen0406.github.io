@@ -1,0 +1,312 @@
+//default.css:
+* {
+	margin: 0;
+	padding: 0;
+}
+button{
+	border: none;
+	outline: none;
+	background-color: inherit;
+}
+body,
+html {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+}
+
+ul {
+	list-style: none;
+}
+input{
+	outline: none;
+}
+/* 解决span标签超出父元素后自动换行的问题 */
+span {
+	white-space: normal;
+	word-break: break-all;
+}
+
+div {
+	white-space: normal;
+	word-break: break-all;
+}
+/* 固定标签的样式 */
+#deleteContain{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: 1;
+	display: none;
+}
+.zhezhao{
+	width: 100%;
+	height:100%;
+	background-color: black;
+	opacity: 0.7;
+}
+#deleteCommend{
+	color: #4169E1;
+	position: fixed;
+	bottom: -10px;
+	padding: 10px 0;
+	box-sizing: border-box;
+	text-align: center;
+	width: 100vw;
+	height: 100px;
+	background-color: white;
+	border-radius: 10px;
+	z-index: 5;
+	color: #000000;
+	font-weight: 500;
+	/* display: none; */
+}
+.deleteChoic{
+	color: red;
+	height: 30px;
+	border-bottom: 4px solid #EEEEEE;
+}
+.cancelChoic{
+	height: 40px;
+	line-height: 40px;
+}
+.userContain {
+	padding: 10px 0;
+	width: 375px;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.userContain .userHeadImg {
+	height: 40px;
+	width: 40px;
+	border-radius: 5px;
+	background-color: aqua;
+}
+
+.userContain .otherContain {
+	width: 300px;
+}
+
+.userContain .otherContain .newsOwnerName {
+	color: royalblue;
+	margin-bottom: 5px;
+}
+
+.userContain .otherContain .userTextContain {
+	margin: 5px 0;
+}
+
+.userContain .otherContain .userPicAndVideoContain {
+	margin: 5px 0;
+}
+
+.userContain .otherContain .dateAndChoic {
+	position: relative;
+	margin: 3px 0;
+	height: 25px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.userContain .otherContain .dateAndChoic .date {
+	font-size: 13px;
+	color: #a3a3a3;
+}
+
+.userContain .otherContain .dateAndChoic .choic {
+	display: block;
+	height: 15px;
+	width: 25px;
+	border-radius: 3px;
+	background-color: #dedede;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.userContain .otherContain .dateAndChoic .choic .point {
+	display: block;
+	height: 4px;
+	width: 4px;
+	border-radius: 50%;
+	background-color: mediumblue;
+}
+
+.userContain .otherContain .dateAndChoic .commendChoic {
+	position: absolute;
+	box-sizing: border-box;
+	bottom: 0;
+	right: 30px;
+	overflow: hidden;
+	/* height: 0;
+				width: 0;*/
+	height: 25px;
+	width: 130px;
+	border-radius: 3px;
+	padding: 5px;
+	background: #2f2f2f;
+	color: white;
+	font-size: 10px;
+	transition: all 1s;
+}
+
+.userContain .otherContain .dateAndChoic .commendChoic .choicList {
+	display: flex;
+}
+
+.userContain .otherContain .dateAndChoic .commendChoic .choicList div {
+	flex: 1;
+	height: 15px;
+	text-align: center;
+}
+
+.userContain .otherContain .dateAndChoic .commendChoic div img {
+	height: 100%;
+	width: 25%;
+}
+
+.userContain .otherContain .dateAndChoic .commendChoic .choicList div:nth-child(1) {
+	border-right: 1px solid black;
+}
+
+.bottomLine {
+	height: 1px;
+	width: 100%;
+	background-color: #dcdcdc;
+}
+#newsList .commendContain {
+	display: flex;
+	flex-direction: column;
+	background-color: #eeeeee;
+	width: 300px;
+	border-radius: 3px;
+}
+
+#bgPic {
+	height: 200px;
+	width: 100vw;
+	background-image: url(../img/22222.jpg);
+	background-size: 100% 100%;
+
+}
+
+.header {
+	height: 40px;
+	width: 100vw;
+	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	line-height: 40px;
+	padding: 10px 15px;
+}
+
+.header img {
+	height: 20px;
+	width: 20px;
+}
+
+.whoZanList {
+	font-size: 10px;
+	font-weight: bolder;
+	color: #2f4ea6;
+}
+
+#newsList li {
+	position: relative;
+}
+//sendpyqPage.css:
+#sendPYQPage{
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	position: fixed;
+	overflow: hidden;
+	z-index: 5;
+	/* top: 100vh；开始的时候藏在下面 */
+	top: 100vh;
+	transition: all 0.5s;
+}
+.sendPYQHeader{
+	display: flex;
+	height: 30px;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 10px;
+}
+.title{
+	font-weight: bold;
+	font-size: 14px;
+}
+.sendPYQ{
+	
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	width: 40px;
+	font-size: 13px;
+}
+#cannotSend{
+	background-color: #DCDCDC;
+	color: #808080;
+}
+#canSend{
+	background-color: green;
+	color: white;
+}
+.PYQTextContain{
+	height: 180px;
+	width: 100%;
+	padding: 20px 40px;
+	box-sizing: border-box;
+}
+.PYQtext{
+	height: 100%;
+	width: 100%;
+	border: 0;
+	outline: none;
+	resize: none;
+	/* overflow: hidden; */
+}
+.otherSet{
+	height: 100px;
+	width: 100%;
+	padding: 0 40px;
+	box-sizing: border-box;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.line{
+	width: 100%;
+	height: 1px;
+	background: #c8c8c8;
+}
+.option{
+	height: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.inputPicConatin{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+#deletePicContain{
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	width: 100vw;
+	height: 100%;
+}

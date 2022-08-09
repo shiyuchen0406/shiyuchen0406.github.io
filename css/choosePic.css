@@ -1,0 +1,28 @@
+//choicPic.css:
+.choosePic{
+	height: 320px;
+	width: 320px;
+	margin: 5px auto;
+}
+.choosePic ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.choosePic ul li{
+	margin-top: 5px;
+}
+.choosePic ul li,.choosePic ul li img{
+	width: 100px;
+	height: 100px;
+}
+.picAndVideoContainBox{
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+.picAndVideoContainBox li img{
+	width: 100px;
+	height: 100px;
+	transition: all 0.2s;
+}
