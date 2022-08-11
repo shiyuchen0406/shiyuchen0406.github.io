@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="angular-1.3.0.js"></script>
+    <title>公告墙</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        li {
+            list-style: none;
+        }
+
+
+        input {
+            width: 320px;
+            height: 24px;
+        }
+
+
+        button {
+            width: 80px;
+            height: 24px;
+        }
+
+
+        div {
+            margin: 16px auto;
+        }
+
+
+        main {
+            position: relative;
+            width: 512px;
+            margin: 0 auto;
+        }
+
+
+        .note_list {
+            width: 496px;
+            height: 396px;
+            margin: 0 auto;
+            padding: 6px;
+            border: 2px solid #999;
+        }
+
+
+        .ipt {
+            width: 388px;
+        }
+
+
+        .btn {
+            width: 80px;
+        }
+
+
+        #dialog {
+            width: 160px;
+            height: 160px;
+            position: absolute;
+            top: 160px;
+            left: 176px;
+            margin: 0 auto;
+            border: 1px solid #999;
+        }
+
+
+        #dialog h3, h5 {
+            margin: 16px 0;
+            text-align: center;
+        }
+
+
+        #dialog button {
+            display: block;
+            margin: 32px auto;
+        }
+    </style>
+    <script type="text/javascript">
+        var app = angular.module("nbApp", []);
+
+
+        app.constant("tips", {
+            add_note_empty: {
+                msg: "请输入记录内容",
+                btnTips: "好吧"
+            },
+            add_note_exists: {
+                msg: "您记录的内容已经存在",
+                btnTips: "好吧"
+            },
+            search_empty: {
+                msg: "请输入搜索内容",
+                btnTips: "好吧"
+            },
+            search_success: {
+                msg: "搜到相关内容",
+                btnTips: "很好"
+            },
+            search_failure: {
+                msg: "未搜到相关内容",
+                btnTips: "失望"
+            }
+        });
+
+
+        app.controller("nbCtrl", function ($scope, tips) {
+            var dialogShow = function (tips) {
+                $scope.dialog_message = tips.msg;
+                $scope.dialog_btn_tips = tips.btnTips;
+                $scope.dialog_is_show = true;
+            };
+
+
+            $scope.dialogHide = function () {
+                $scope.dialog_is_show = false;
+            };
+
+
+            $scope.noteList = [];
+
+
+            $scope.addNote = function () {
+                if ($scope.note == undefined) {
+                    dialogShow(tips.add_note_empty);
+                    return;
+                }
+
+
+                var note = $scope.note.trim();
+                if (note.length == 0) {
+                    dialogShow(tips.add_note_empty);
+                    return;
+                }
+
+
+                if ($scope.noteList.indexOf(note) >= 0) {
+                    dialogShow(tips.add_note_exists);
+                    return;
+                }
+
+
+                $scope.noteList.unshift(note);
+                $scope.note = "";
+            };
+
+
+            $scope.search = function () {
+                if ($scope.keyword == undefined) {
+                    dialogShow(tips.search_empty);
+                    return;
+                }
+
+
+                var keyword = $scope.keyword.trim();
+                if (keyword.length == 0) {
+                    dialogShow(tips.search_empty);
+                    return;
+                }
+
+
+                if ($scope.noteList.indexOf(keyword) >= 0) {
+                    dialogShow(tips.search_success);
+                } else {
+                    dialogShow(tips.search_failure);
+                }
+            };
+        });
+    </script>
+</head>
+<body ng-app="nbApp">
+<main ng-controller="nbCtrl">
+    <div>记账本</div>
+
+
+    <div class="note_list">
+        <ul>
+            <li ng-repeat="value in noteList">{{ value }}</li>
+        </ul>
+    </div>
+
+
+    <div class="ipt">
+        输入框：<input type="text" ng-model="note"/>
+    </div>
+
+
+    <div class="btn">
+        <button ng-click="addNote()">记录</button>
+    </div>
+
+
+    <div class="ipt">
+        搜索框：<input type="text" ng-model="keyword"/>
+    </div>
+
+
+    <div class="btn">
+        <button ng-click="search()">搜索</button>
+    </div>
+
+
+    <div id="dialog" ng-if="dialog_is_show">
+        <h3>公告墙</h3>
+        <h5>>自2022年8月11日起，群规3.0正式实行</h5>
+        <input type="button" name="close" value="朕已知晓" onclick="window.close();" />
+    </div>
+</main>
+</body>
+</html>
