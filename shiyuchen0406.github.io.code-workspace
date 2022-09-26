@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "liuer",
+			"path": "..\\..\\liuer"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "liuer"
+	}
+}
