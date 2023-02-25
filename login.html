@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>login</TITLE>
+    <link rel="shortcut icon" href="img/login.ico">
+</HEAD>
+<FRAMESET COLS="1,*" frameborder=0 framespacing=0>
+<FRAME SRC="PS.HTM" NAME="count" noresize scrolling=no>
+<FRAME SRC="login1.html" NAME="search" noresize>
+</frameset>
+<body>
+    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool/disable-devtool.min.js'></script>
+</script>
+<script>
+document.onkeydown = function(){
+    //禁止12
+    if (event.ctrlKey && window.event.keyCode==123){
+    return false;
+    }
+    }
+    </script>
+    <script>
+        //按键触发
+    document.onkeydown = function(){
+      //禁止 F12
+      if (window.event && window.event.keyCode == 123) {
+      event.keyCode = 0;
+      event.returnValue = false;
+      }
+      }
+    </script>
+    <script>
+        //按键触发
+    document.onkeydown = function(){
+      //禁止ctrl+u
+      if (event.ctrlKey && window.event.keyCode==85){
+      return false;
+      }
+      }
+    </script>
+    <SCRIPT language=javascript>
+        function click() {if (event.button==2) {alert('对不起，您无权查看源代码');}}document.onmousedown=click
+        </SCRIPT>
+        <script Language="JavaScript">
+            function click() 
+            if (event.button==2||event.button==3) 
+            {
+                alert('用右键干嘛？！');
+            }
+            //引号中提示可自定义
+            document.onmousedown=click
+            </script>
+            <script language="javascript">
+                if(top==self)top.location="login.htm"
+                </script> 
+</body>
+</html>
