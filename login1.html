@@ -71,12 +71,12 @@ setInterval(function () {
 					passwd: '0406'
 				},
 				{
-					username: 'zhangsihan',
-					passwd: 'zsh'
+					username: 'wanglitai',
+					passwd: 'wlt'
 				},
 				{
-					username: 789,
-					passwd: 'zxc'
+					username: 'linjunxi',
+					passwd: 'ljx'
 				}
 			]
 			function login() { //登陆判断
@@ -109,6 +109,12 @@ setInterval(function () {
 			btnClear.addEventListener('click', function() {
 				doClear();
 			});
+			//这段代码的主要功能是实现一个登录页面的验证和清除功能。具体来说：
+			//第一行定义了一个script标签，指定了type属性为text/javascript，表示这里是JavaScript代码。
+			//二行到第十行定义了一个accountAll数组，存储了三个账户的json数据，每个json数据包含了username和passwd两个属性。
+		    //第十一行到第二十四行定义了一个login函数，用于登录判断。该函数首先获取页面上的username和passwd输入框的值，然后用filter方法从accountAll数组中筛选出与username相同的账户对象，并取出第一个元素（如果不存在则返回空数组）。然后判断该账户对象是否存在，如果不存在则弹出“账户不存在”的提示框；如果存在则判断用户名和密码是否匹配，如果匹配则弹出“登录成功”的提示框，并跳转到指定的网址；如果不匹配则弹出“登录失败”的提示框。
+			//第二十五行到第三十四行定义了一个doClear函数，用于清除页面上所有输入框的内容。该函数首先获取页面上所有input标签的元素，并用for循环遍历它们。然后判断每个元素的type属性是否为text或password，如果是则将其value属性设为空字符串。
+			//第三十六行到第四十一行给清除按钮增加onclick事件。首先获取页面上id为btnClear的元素（即清除按钮），然后给它添加click事件监听器，并传入一个匿名函数作为回调函数。该回调函数调用doClear函数来执行清除操作。
 		</script>
 	</body>
 </html>
