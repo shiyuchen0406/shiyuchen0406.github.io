@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/4a4ce6258d.js" crossorigin="anonymous"></script>
 		<style>
 			.center-box{
 				text-align: center;
@@ -60,16 +62,21 @@ setInterval(function () {
 					if(top==self)top.location="login.htm"
 					</script>
 		<body background="img/6666.jpg"></body>
-		<h1>请登录</h1>
-		<div>
-			<span>用户名:</span>
-			<input type="text" placeholder="请输入用户名..." id="username">
-			<span>密码:</span>
-			<input type="password" placeholder="请输入密码..." id="passwd">
-			<input type="button" value="登录" onclick="login()">
-			<input type="button" id="btnClear" value="清除" onclick="doClear()" />
+		<div id="bigBox">
+			<h1>LOGIN</h1>
+			<div class="inputBox">
+				<div class="inputText">
+					<i class="fas fa-user"></i>
+					<input type="text" placeholder="username" id="username">
+				</div>
+				<div class="inputText">
+					<i class="fas fa-lock"></i>
+					<input type="passwd" placeholder="passwd" id="passwd">
+				</div>
+				<input type="button" value="LOGIN" class="inputButton">
+	
+			</div>
 		</div>
-		<li><a href="https://shiyuchen0406.github.io/adminlogin.htm">管理员登录后台</a></li>
 		<script type="text/javascript">
 			let accountAll = [{ // 存储账户json数据的数组
 					username: 'shiyuchen',
